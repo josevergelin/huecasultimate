@@ -1,0 +1,31 @@
+ion-icon {
+  &[class*=”custom-”] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+  &[class*=”custom-person”] {
+    mask-image: url(../assets/icon/person-circle-outline.svg);
+  }
+  &[class*=”custom-camera”] {
+    mask-image: url(../assets/icon/camera-outline.svg);
+  }
+  &[class*=”custom-search”] {
+    mask-image: url(../assets/icon/search-outline.svg);
+  }
+  &[class*=”custom-home”] {
+    mask-image: url(../assets/icon/home-outline.svg);
+  }
+}
+
+.ion-color-favorite {
+  --ion-color-base: var(--ion-color-favorite);
+  --ion-color-base-rgb: var(--ion-color-favorite-rgb);
+  --ion-color-contrast: var(--ion-color-favorite-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-favorite-contrast-rgb);
+  --ion-color-shade: var(--ion-color-favorite-shade);
+  --ion-color-tint: var(--ion-color-favorite-tint);
+}
