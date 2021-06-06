@@ -11,7 +11,23 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-
+  {
+    path: 'nuevahueca',
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./nuevahueca/nuevahueca.module').then( m => m.NuevahuecaPageModule),
+      },
+      {
+        path: ":lugarId",
+        loadChildren: () => import('./nuevahueca/lugar/lugar.module').then(m => m.LugarPageModule),
+      }
+    ]
+  },
+  {
+    path: 'nuevolugar',
+    loadChildren: () => import('./nuevahueca/add-lugar/add-lugar.module').then(m => m.AddLugarPageModule),
+  }
 ];
 
 @NgModule({
