@@ -37,4 +37,7 @@ export class SearchPage implements OnInit {
   ngOnInit() {
   }
 
+  segmentChanged($event: any) {
+    
+  }
 }
