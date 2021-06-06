@@ -7,23 +7,23 @@ import { Lugar } from './lugar.model';
 })
 export class NuevahuecaService {
   private nuevahueca: Lugar[] = [
-    {
+     {
       id: '1',
-      title: 'Chambo',
-      imageURL: 'https://img.goraymi.com/2020/05/14/aa4d2f30e1f0b1886a8f344f75aa95db_sl.jpg',
-      comments: ['Lugar asombrosoo', 'paisaje unico'],
+      title: 'RIOBAMBA',
+      imageURL: 'https://goecuador.net/archivos/blogs/hornado-riobamba.jpg',
+      comments: ['Lugar del mejor Hornado', 'El mejor sabor'],
     },
     {
       id: '2',
-      title: 'Chimborazo',
-      imageURL: 'https://elpais.com/elpais/imagenes/2016/04/06/ciencia/1459968044_919086_1460016482_noticia_fotograma.jpg',
-      comments: ['Lugar mágico', 'Experiencias asombrosas']
+      title: 'AMBATO',
+      imageURL: 'https://media-cdn.tripadvisor.com/media/photo-s/06/00/06/00/las-gallinas-de-pinllo.jpg',
+      comments: ['Gastronomia y tradición', 'la mejores gallinas de Pinllo']
     },
     {
       id: '3',
-      title: 'Cubillines',
-      imageURL: 'https://elpais.com/elpais/imagenes/2016/04/06/ciencia/1459968044_919086_1460016482_noticia_fotograma.jpg',
-      comments: [],
+      title: 'LATACUNGA',
+      imageURL: 'https://www.nanmagazine.com/wp-content/uploads/2017/04/feat_25_b_bn.jpg',
+      comments: ['las mejores chucchucaras', 'latacunga vive la gastronomía'],
     }
   ]
 
