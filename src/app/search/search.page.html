@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+    <img slot="end" width="30" height="30" class="ion-margin-end" src="./assets/images/logo-2.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="primary">
+  <div id="container">
+    <!-- Default Searchbar -->
+    <ion-searchbar></ion-searchbar>
+  </div>
+<ion-content>
+  <app-huecas></app-huecas>
+</ion-content>
+
+
+
+
+
+
+
+
+  <script>
+    const searchbar = document.querySelector('ion-searchbar');
+    const items = Array.from(document.querySelector('ion-list').children);
+
+    searchbar.addEventListener('ionInput', handleInput);
+
+    function handleInput(event) {
+      const query = event.target.value.toLowerCase();
+      requestAnimationFrame(() => {
+        items.forEach(item => {
+          const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
+          item.style.display = shouldShow ? 'block' : 'none';
+        });
+      });
+    }
+  </script>
+
+
+
+</ion-content>
+<!-- Footer without a border -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <app-main-nav></app-main-nav>
+  </ion-toolbar>
+</ion-footer>

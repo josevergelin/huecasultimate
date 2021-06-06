@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'wall',
+    loadChildren: () => import('./wall/wall.module').then( m => m.WallPageModule)
+  },
 
 ];
 
