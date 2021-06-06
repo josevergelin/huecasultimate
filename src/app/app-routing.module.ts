@@ -12,9 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '',
-    redirectTo: 'search',
-    pathMatch: 'full'
+    path: 'wall',
+    loadChildren: () => import('./wall/wall.module').then( m => m.WallPageModule)
   },
   {
     path: 'nuevahueca',
