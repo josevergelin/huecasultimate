@@ -1,0 +1,27 @@
+<p>
+  huecas works!
+</p>
+<ion-content [fullscreen]="true" color="primary">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <ion-card *ngFor="let hueca of huecas">
+          <img src="./assets/{{hueca.imageUrl}}"  alt="{{hueca.title}}"/>
+
+          <ion-card-header>
+            <ion-card-subtitle>{{hueca.lugar}}</ion-card-subtitle>
+            <ion-card-title color="primary">{{hueca.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{hueca.description}}
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

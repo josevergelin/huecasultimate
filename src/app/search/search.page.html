@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Buscar
+    </ion-title>
+    <img slot="end" width="30" height="30" class="ion-margin-end" src="./assets/images/logo-2.png">
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-searchbar class="ion-padding-top"></ion-searchbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="primary">
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button>
+      <ion-label>Friends</ion-label>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-label>Enemies</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-content color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" *ngFor="let hueca of huecas">
+          <ion-card>
+            <img src="./assets/{{hueca.imageUrl}}"  alt="{{hueca.title}}"/>
+            <ion-card-header>
+              <ion-card-title color="primary">{{hueca.title}}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  <script>
+    const searchbar = document.querySelector('ion-searchbar');
+    const items = Array.from(document.querySelector('ion-list').children);
+
+    searchbar.addEventListener('ionInput', handleInput);
+
+    function handleInput(event) {
+      const query = event.target.value.toLowerCase();
+      requestAnimationFrame(() => {
+        items.forEach(item => {
+          const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
+          item.style.display = shouldShow ? 'block' : 'none';
+        });
+      });
+    }
+  </script>
+
+</ion-content>
+<!-- Footer without a border -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <app-main-nav></app-main-nav>
+  </ion-toolbar>
+</ion-footer>
