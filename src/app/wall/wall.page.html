@@ -9,9 +9,9 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col size="6" *ngFor="let hueca of huecas">
 
-        <ion-card *ngFor="let hueca of huecas">
+        <ion-card>
           <img src="./assets/{{hueca.imageUrl}}"  alt="{{hueca.title}}"/>
 
           <ion-card-header>
