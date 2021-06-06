@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons>
+      <ion-back-button default-href="/nuevahueca"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{lugar.title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)= "deleteLugar()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="lugar.imageURL"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{lugar.title}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list *ngIf="lugar.comments && lugar.comments.length > 0; else noComments">
+          <ion-item *ngFor="let comment of lugar.comments">
+            <p class="ion-text-center">{{comment}}</p>
+          </ion-item>
+        </ion-list>
+        <ng-template #noComments>
+          <ion-text>
+            <p class="ion-text-center">No hay comentarios en esta sección</p>
+          </ion-text>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

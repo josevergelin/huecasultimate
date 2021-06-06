@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>HUECAS ECUADOR</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="dark" (click)="goToHome()">
+        <ion-icon name="globe"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let lugar of nuevahueca" [routerLink]="['/nuevahueca', lugar.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="lugar.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-lavel>
+      {{lugar.title}}
+      </ion-lavel>
+      <ion-lavel>
+        {{lugar.comment}}
+      </ion-lavel>
+    </ion-item>
+  </ion-list>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="addNewLugar()">
+<ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>
+

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-back-button default-href="/nuevahueca"></ion-back-button>
+    </ion-buttons>
+    <ion-title>SUBIR NUEVA HUECA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-input type="text" placeholder="Escriba el Nombre de la Hueca" #title></ion-input>
+            <ion-input type="text" placeholder="descripción de la Hueca" #comments></ion-input>
+            <ion-input type="text" placeholder="Url hueca" #imageURL ></ion-input>
+            <ion-button color="secondary">
+            <ion-icon name="duplicate-sharp" #imageURL></ion-icon>
+              <p>Cargar Foto</p>
+            </ion-button>
+            <div class="ion-text-center">
+            <ion-button color="primary" (click)="saveNewLugar(title, imageURL, comments)">
+              <ion-icon name="save"></ion-icon>
+              <p>Guardar Hueca</p>
+            </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+</ion-content>
