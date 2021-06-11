@@ -35,7 +35,11 @@ const routes: Routes = [
   {
     path: 'quienes-somos',
     loadChildren: () => import('./quienes-somos/quienes-somos.module').then( m => m.QuienesSomosPageModule)
+  },  {
+    path: 'mapshuecas',
+    loadChildren: () => import('./mapshuecas/mapshuecas.module').then( m => m.MapshuecasPageModule)
   }
+
 ];
 
 @NgModule({
