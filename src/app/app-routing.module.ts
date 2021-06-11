@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'nuevolugar',
     loadChildren: () => import('./nuevahueca/add-lugar/add-lugar.module').then(m => m.AddLugarPageModule),
+  },
+  {
+    path: 'quienes-somos',
+    loadChildren: () => import('./quienes-somos/quienes-somos.module').then( m => m.QuienesSomosPageModule)
   }
 ];
 

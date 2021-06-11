@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>quienes_somos</ion-title>
+  <ion-toolbar color="light">
+    <ion-title>Quiénes somos</ion-title>
+    <ion-buttons slot="end">
+
+      <ion-button color="dark" routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <img slot="end" width="30" height="30" class="ion-margin-end" src="./assets/images/logo-2.png">
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" color="primary">
+  <div id="container">
+
+
+    <ion-card>
+      <img src="./assets/images/logo-1.png" />
+
+      <ion-card-content>
+        <p>La gastronomía del Ecuador, se caracteriza por su variada forma de preparar comidas y bebidas. Dentro del país podemos encontrar 4 principales regiones: costa, sierra, oriente y región insular (Galápagos) con sus respectivas costumbres y tradiciones. Dentro de la “comida típica” podemos encontrar; arroz, huevo, papas, aguacate, carne de res o de cerdo. Debido a que el Ecuador consta con una amplia línea costera, los productos marinos son abundantes. Entre la comida Ecuatoriana se encuentran platos mas reconocidos, se encuentra, el ceviche, el bollo, la fanesca, el sancocho de pescado etc. Por otro lado, la zona tropical del Ecuador es muy rica en sus distintas variedades de frutas: naranjilla, guanabana, granadilla, pitahaya etc. Todos estos productos son distribuidos entre las distintas regiones, es por eso que los mejores platos se encuentran alrededor de todo el Ecuador.
+
+          </p><p>Huecas ecuatorianas es la app apropiada para registrar y buscar la hueca más cercana y preferida por las personas dando realce a nuestra gastronomía y paladares diversos, gracias a la georeferenciación será más divertido y acertada el poder llegar a una de estas.  </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 
 </ion-content>
